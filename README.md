@@ -35,7 +35,7 @@ To investigate targeted activity against the non-standard SSH port (`2222`), tra
 ip.addr == 192.168.100.17 && ip.addr == 192.168.100.18 && tcp.port == 2222
 ```
 
-![Port 2222 Probe Analysis](screenshots/02-port-2222-probe-analysis.png)
+![Port 2222 Probe Analysis](screenshots/02-malicious-payload-stream.png)
 
 #### Key Forensic Findings:
 * **Connection Refusal Pattern:** The target host (`192.168.100.18`) immediately responds to incoming `SYN` requests with `[RST, ACK]` packets (`Seq=1 Ack=1 Win=0`), confirming the port was closed during the probe window.
